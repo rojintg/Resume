@@ -5,7 +5,7 @@ html {
 }
 /* grid the whole page */
 body {
-  margin: 0;
+  margin: 10;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 15% 85%;
