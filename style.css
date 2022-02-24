@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Source+Sans+Pro&display=swap");
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.4;
+}
+/* grid the whole page */
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15% 85%;
+  grid-gap: 0.5rem;
+}
+header {
+  background-color: rgba(80, 79, 79, 0.986);
+  display: grid;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  grid-template-rows: 1fr 1fr;
+}
+h1, h2, h3 {
+  font-family: "Domine", serif;
+}
+h1, aside h3 {
+  color: rgb(150, 128, 101);
+}
+h1 {
+  margin: 7vh 0 0 0.7rem;
+}
+nav {
+  grid-row: 2/3;
+  margin-top: 2rem;
+}
+nav ul {
+  list-style-type: none;
+  margin-right: 0.8rem;
+  text-align: right;
+}
+nav li {
+  padding: 0.4rem;
+  display: inline;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+main {
+  grid-column: 2/4;
+}
+h2 {
+  border-bottom: 1px solid rgb(150, 128, 101);
+}
+aside {
+  background-color: rgba(165, 164, 164, 0.212);
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  border-right: 1px solid rgb(150, 128, 101);
+  padding-left: 0.8rem;
+}
+#profile-pic {
+  max-width: 200px;
+  display: block;
+  margin: auto;
+  margin-top: 0.7rem;
+}
+
+i {
+  font-size: 20px;
+  margin-left: 0.5rem;
+}
+.contact li {
+  padding: 0.2rem;
+}
+.contact a {
+  color: black;
+}
+.skills ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.skills li {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-bottom: 1.5rem;
+}
+footer {
+  grid-column: 1/4;
+}
+#name {
+  font-weight: bold;
+}
+/* For large screen */
+@media screen and (min-width: 800px) {
+  body {
+    grid-template-columns: 25% 75%;
+  }
+  header {
+    grid-template-columns: 1fr 1fr;
+  }
+  nav {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
+  nav li {
+    display: block;
+    border: 1px solid white;
+    margin: 0 0.5rem 0.3rem 10rem;
+    padding-bottom: 0.2rem;
+  }
+  main {
+    max-width: 880px;
+    margin: auto;
+  }
+}
+/* I use the ifographic elements photos from freepik.com */
