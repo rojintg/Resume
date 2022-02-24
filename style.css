@@ -5,11 +5,10 @@ html {
 }
 /* grid the whole page */
 body {
-  margin: 10;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 15% 85%;
-  grid-gap: 0.5rem;
 }
 header {
   background-color: rgba(80, 79, 79, 0.986);
@@ -46,6 +45,7 @@ nav a {
 }
 main {
   grid-column: 2/4;
+  padding: 1rem;
 }
 h2 {
   border-bottom: 1px solid rgb(150, 128, 101);
@@ -92,10 +92,11 @@ footer {
 /* For large screen */
 @media screen and (min-width: 800px) {
   body {
-    grid-template-columns: 25% 75%;
+    grid-template-columns: repeat(4, 1fr);
   }
   header {
     grid-template-columns: 1fr 1fr;
+    grid-column: 2/-1;
   }
   nav {
     grid-column: 2/3;
@@ -106,10 +107,15 @@ footer {
     border: 1px solid white;
     margin: 0 0.5rem 0.3rem 10rem;
     padding-bottom: 0.2rem;
+    min-width: 8rem;
   }
   main {
-    max-width: 880px;
+    max-width: 850px;
     margin: auto;
+    grid-column: 2/-1;
+  }
+  aside{
+    grid-column: 1/2;
   }
 }
 /* I use the ifographic elements photos from freepik.com */
